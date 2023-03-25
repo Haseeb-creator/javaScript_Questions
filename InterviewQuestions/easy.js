@@ -29,6 +29,26 @@
 14 : Can you explain the difference between a class component and a functional component in React?
 
 15 : How do you handle routing in React?
+ 
+16 : How do you handle form input in React?
+
+17 : How do you handle events in React?
+
+18 : Can you explain the concept of JSX in React?
+
+19 : How do you handle conditional rendering in React?
+
+20 : Can you explain the difference between props.children and this.props.children in React?
+
+21 : How do you handle async operations in React?
+
+22 : Can you explain the concept of higher-order components (HOC) in React?
+
+23 : Can you explain the difference between controlled and uncontrolled components in React?
+
+24 : How do you handle error boundaries in React?
+
+25 : Can you explain the concept of context in React?
 
 */
 
