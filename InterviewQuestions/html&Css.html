@@ -1,0 +1,215 @@
+<!-- 
+
+1 : What is HTML?
+2 : What is CSS?
+3 : What is the difference between HTML and CSS?
+4 : What are some new features in HTML5?
+5 : What are the benefits of using CSS in web development?
+6 : What are the different ways to apply CSS to HTML documents?
+7 : What is a class in CSS?
+8 : What is an ID in CSS?
+9 : How do you link a CSS stylesheet to your HTML document?
+10 : What is the box model in CSS?
+11 : What is responsive design in CSS?
+12 : What is a media query in CSS?
+13 : What are some CSS frameworks?
+14 : How do you optimize images for web use?
+15 : What are some common cross-browser compatibility issues, and how do you fix them?
+16 : What is accessibility in web development, and how do you ensure that your website is accessible?
+17 : What are some best practices for writing efficient and maintainable CSS code?
+18 : What are the different types of selectors in CSS, and how do you use them?
+19 : How do you use the display property in CSS?
+20 : What is the difference between inline and block elements in HTML, and how do you style them differently using CSS?
+ -->
+
+<!-- 
+
+	1: 	What is HTML?
+HTML stands for HyperText Markup Language, which is used to create web pages and display content on the internet. HTML is the standard markup language used to create web pages.
+
+2: What is CSS?
+CSS stands for Cascading Style Sheets, which is used to describe the presentation of a document written in HTML or XML. CSS is used to define styles for web pages, including the layout, colors, and fonts.
+
+3 : What is the difference between HTML and CSS?
+HTML is used to define the content and structure of a web page, while CSS is used to define the presentation and layout of the content.
+
+4 : What are some new features in HTML5?
+Some new features in HTML5 include new semantic elements like <header>, <footer>, <nav>, <article>, and <section>, video and audio elements, and improved form controls.
+
+5 : What are the benefits of using CSS in web development?
+CSS allows for better control over the layout and presentation of web pages, it separates presentation from content, makes it easier to maintain a consistent look and feel across multiple pages, and improves website accessibility and usability.
+
+6 : What are the different ways to apply CSS to HTML documents?
+CSS can be applied to HTML documents in three different ways: using an external stylesheet, using internal styles, or using inline styles.
+
+Example of an external stylesheet:
+	 -->
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+<!-- 
+7 : What is a class in CSS?
+A class is a selector in CSS that allows you to apply styles to multiple elements with the same class name.
+Example:
+		 -->
+<style>
+  .myclass {
+    color: red;
+  }
+</style>
+
+<!-- 
+8 : What is an ID in CSS?
+An ID is a selector in CSS that allows you to apply styles to a specific element with a unique ID name.
+Example:
+ -->
+
+<style>
+  #myid {
+    color: blue;
+  }
+</style>
+
+<!-- 
+	9 : How do you link a CSS stylesheet to your HTML document?
+You can link a CSS stylesheet to an HTML document using the <link> tag in the head section of the HTML document.
+Example:
+	 -->
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<!-- 
+10 :	What is the box model in CSS?
+The box model in CSS is a way to describe the layout of elements on a web page. It includes the content area, padding, border, and margin of an element.
+Example:
+ -->
+
+<style>
+  .box {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 10px;
+  }
+</style>
+
+<!-- 
+	11:What is responsive design in CSS?
+Responsive design in CSS is a way to design web pages that can adapt to different screen sizes and devices. It involves using media queries to apply different styles to elements based on the screen size or device.
+Example of a media query:
+ -->
+
+<style>
+  @media only screen and (max-width: 600px) {
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+  }
+</style>
+
+<!-- 
+	12 : What is a media query in CSS?
+A media query in CSS is a way to apply different styles to elements based on certain conditions, such as the screen size or device type.
+Example:
+ -->
+<style>
+  @media only screen and (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<!-- 
+	13 : What are some CSS frameworks?
+Some popular CSS frameworks include Bootstrap, chackra, and MaterialUI.
+
+14 : How do you optimize images for web use?
+You can optimize images for web use by compressing them to reduce file size, resizing them
+ -->
+
+<!-- 
+		15 : What are some common cross-browser compatibility issues, and how do you fix them?
+Common cross-browser compatibility issues include differences in the way browsers interpret CSS, HTML, and JavaScript. To fix these issues, it is important to test your website in multiple browsers and use vendor prefixes for CSS properties that are not yet fully supported.
+
+16 : What is accessibility in web development, and how do you ensure that your website is accessible?
+Accessibility in web development refers to making websites and web applications accessible to people with disabilities, such as visual or hearing impairments. To ensure that your website is accessible, you can use semantic HTML, provide alt text for images, use proper heading structure, and make sure that your website can be navigated using a keyboard.
+
+17 : What are some best practices for writing efficient and maintainable CSS code?
+Some best practices for writing efficient and maintainable CSS code include using consistent naming conventions, minimizing the use of !important, using shorthand properties, and organizing your CSS code into modules.
+
+18 : What are the different types of selectors in CSS, and how do you use them?
+There are several types of selectors in CSS, including element selectors, class selectors, ID selectors, attribute selectors, and pseudo-classes. You can use these selectors to target specific elements or groups of elements on a web page.
+
+Example:
+	 -->
+<style>
+  /* element selector */
+  p {
+    color: red;
+  }
+
+  /* class selector */
+  .myclass {
+    color: blue;
+  }
+
+  /* ID selector */
+  #myid {
+    color: green;
+  }
+
+  /* attribute selector */
+  a[href="https://www.example.com"]
+  {
+    color: orange;
+  }
+
+  /* pseudo-class selector */
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<!-- 
+	19 : How do you use the display property in CSS?
+The display property in CSS is used to control how elements are displayed on a web page. It can be set to values like block, inline, and none to control the layout of elements.
+Example:
+ -->
+<style>
+  .block {
+    display: block;
+  }
+
+  .inline {
+    display: inline;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<!-- 
+	20 : What is the difference between inline and block elements in HTML, and how do you style them differently using CSS?
+Inline elements are displayed inline with the text, while block elements take up the full width of the page and are displayed on a new line. To style them differently using CSS, you can use the display property to set them to block or inline, or use other CSS properties like width and height to control their size and layout.
+Example:
+ -->
+<style>
+  /* set paragraph elements to display as block elements */
+  p {
+    display: block;
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+  }
+
+  /* set anchor elements to display as inline elements */
+  a {
+    display: inline;
+    color: red;
+    text-decoration: underline;
+  }
+</style>
