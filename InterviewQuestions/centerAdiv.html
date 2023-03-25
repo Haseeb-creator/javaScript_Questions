@@ -1,0 +1,92 @@
+<!-- 
+	There are several methods of centering a <div> in CSS. Here are a few common ways:
+ -->
+
+<!-- 1 : Using the margin property: -->
+<style>
+  div {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+</style>
+
+<!-- This method centers the <div> horizontally by setting its left and right margins to auto. It requires the <div> to have a defined width and works well when the <div> has a fixed size. -->
+
+<!-- 2 : Using Flexbox: -->
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+<!-- This method centers the <div> both horizontally and vertically by using Flexbox. It requires setting the parent container to display: flex; and using justify-content: center; and align-items: center; to center the child element. -->
+
+<!-- 3 : Using Absolute Positioning: -->
+<style>
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+
+<!-- This method centers the <div> both horizontally and vertically by setting its position to absolute and using top: 50%; and left: 50%; to position it at the center of the parent container. The transform property is then used to move the <div> back up and left by 50% of its own width and height, effectively centering it. -->
+
+<!-- 4 : Using Grid: -->
+<style>
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  /* div {
+    Any width and height
+  } */
+</style>
+<!-- This method centers the <div> both horizontally and vertically by using CSS Grid. Setting the parent container to display: grid; and using place-items: center; centers the child element. -->
+
+<!-- 5 : Using Table: -->
+<style>
+  body {
+    display: table;
+  }
+
+  div {
+    display: table-cell;
+    vertical-align: middle;
+    /* Any width and height */
+  }
+</style>
+
+<!-- This method centers the <div> vertically by using the display property to create a table-like layout. Setting the parent container to display: table; and the child element to display: table-cell; with vertical-align: middle; centers the child element vertically. -->
+
+<!-- 6 : Using Text-align: -->
+<style>
+  div {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    /* Any additional styling */
+  }
+</style>
+
+<!-- This method centers the content inside a <div> element by using the text-align property. By setting text-align: center; on the <div> element and then using margin: 0 auto; to center the element horizontally, the content inside the element is also centered. -->
+
+<!-- 7 : Using Viewport units: -->
+<style>
+  div {
+    width: 50vw;
+    height: 50vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Any additional styling */
+  }
+</style>
+<!-- This method centers the <div> element both horizontally and vertically using viewport units. By setting the width and height of the <div> element to 50vw and 50vh, respectively, it will take up half the width and height of the viewport. By then setting position: fixed; and using top: 50%; and left: 50%; to position the element in the center of the viewport, and using transform: translate(-50%, -50%); to move the element up and left by half its width and height, it is centered both horizontally and vertically. -->
