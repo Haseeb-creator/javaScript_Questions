@@ -1,0 +1,536 @@
+<!-- todo 1 : What are the semantics tags in Html -->
+<!-- Semantic tags are HTML elements that are used to give meaning and structure to web pages. They provide a way to describe the purpose of a section of content, rather than just defining its appearance. Semantic tags help improve the accessibility, SEO, and maintainability of web pages.
+
+Some common semantic tags include:
+
+<header>: Defines the top section of a page or section.
+<nav>: Defines a section of navigation links.
+<main>: Defines the main content of a web page.
+<section>: Defines a section of related content.
+<article>: Defines an independent, self-contained piece of content.
+<aside>: Defines a section of content that is related to the main content, but not necessarily part of it.
+<footer>: Defines the bottom section of a page or section.
+Using semantic tags in HTML allows web developers to create web pages with a clear structure and meaning, making it easier for search engines and screen readers to understand the content of the page. Additionally, it helps developers to more easily maintain and update the page as the content changes over time. 
+-->
+
+<!-- todo 2 : what are the pre-processors -->
+
+<!-- 
+	Preprocessors are software tools that extend the capabilities of traditional programming languages by adding new features or functionality. They are designed to make coding more efficient and flexible, by simplifying common tasks such as formatting, writing modular code, and handling complex logic.
+
+In web development, the most commonly used preprocessors are CSS preprocessors and JavaScript preprocessors. Some of the popular preprocessors for each language include:
+
+CSS preprocessors:
+
+Sass (Syntactically Awesome Style Sheets)
+Less (Leaner Style Sheets)
+Stylus
+JavaScript preprocessors:
+
+TypeScript
+CoffeeScript
+Babel
+CSS preprocessors allow developers to write CSS code using features not available in standard CSS, such as variables, mixins, and nesting. This makes it easier to maintain and update large CSS codebases, and speeds up development by reducing the amount of redundant code that needs to be written.
+
+JavaScript preprocessors allow developers to write JavaScript code using features not yet supported by all web browsers, such as async/await, class fields, and decorators. This means that developers can write modern, efficient code without having to worry about browser compatibility issues.
+
+Preprocessors are typically used during the development phase, and then compiled into standard CSS or JavaScript code for use on production websites or applications. This allows developers to take advantage of advanced language features and development tools, without sacrificing compatibility or performance.
+
+using a CSS preprocessor to write more efficient and maintainable code:
+Without a preprocessor: -->
+<style>
+  header {
+    background-color: #333;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  header a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  header a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<!-- With a preprocessor (Sass): -->
+
+<style>
+  /* $bg-color: #333;
+  $text-color: #fff;
+  $header-font-size: 24px;
+
+  header {
+    background-color: $bg-color;
+    color: $text-color;
+    font-size: $header-font-size;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  } */
+</style>
+
+<!-- In the Sass code above, we have defined some variables at the top of the file, which we can then use throughout our stylesheet. This makes it easy to change colors and font sizes later on, without having to manually update every instance of that value in the CSS code.
+
+We have also used nesting to group the styles for the <a> tags inside the <header> element. This makes the code more readable and easier to maintain, as it is clear which styles apply to which elements.
+
+Finally, we have used the Sass syntax &:hover to define the styles for a hover effect on the <a> tags. This is a shorthand for writing header a:hover, and again makes the code more readable and maintainable. -->
+
+<!-- using a JavaScript preprocessor to write modern, efficient code:
+
+Without a preprocessor: -->
+
+<script>
+  function getUser(id, callback) {
+    fetch('https://api.example.com/users/' + id)
+      .then((response) => response.json())
+      .then((data) => callback(data))
+      .catch((error) => console.error(error))
+  }
+</script>
+
+<!-- With a preprocessor (TypeScript): -->
+
+<script>
+  /* 	async function getUser(id: number): Promise<User> {
+    const response = await fetch(`https://api.example.com/users/${id}`);
+    if (!response.ok) {
+      throw new Error(`Failed to get user with ID ${id}`);
+    }
+    const data = await response.json();
+    return data as User;
+  } */
+</script>
+
+<!-- In the TypeScript code above, we have used the async/await syntax to simplify the code for making an HTTP request to an API. This makes the code easier to read and understand, as the logic is written in a more linear, sequential way.
+
+We have also defined a type for the getUser function, which makes it easier to understand what inputs the function expects and what outputs it returns. This can help prevent errors and improve code quality.
+
+Finally, we have used the throw keyword to handle errors that may occur during the HTTP request. This makes the code more robust and helps to ensure that errors are handled consistently across the application. -->
+
+<!-- todo 3 : what is resetting and normalizing  css -->
+
+<!-- Resetting CSS Example:
+
+Let's say you want to create a simple web page that contains a header, a navigation menu, and some paragraphs of text. By default, different browsers may apply different styles to these elements, making it difficult to create a consistent layout. To start with a clean slate, you can reset all styles using a CSS reset.
+
+Here's an example of a simple CSS reset: -->
+
+<style>
+  /* Reset all element styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+  /* Reset heading styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  /* Reset list styles */
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Reset link styles */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+</style>
+
+<!-- This CSS code resets all styles for all elements, then sets a consistent baseline for font size, font family, and line-height. It also resets the styles for headings, lists, and links.
+
+Normalizing CSS Example:
+
+Now let's say you want to create a more complex web page with many different elements and styles. To ensure that all elements are displayed consistently across different browsers, you can normalize the styles using a CSS normalize.
+
+Here's an example of a simple CSS normalize: -->
+
+<style>
+  /* Normalize all element styles */
+  html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  /* Normalize heading styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Normalize list styles */
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Normalize link styles */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:focus,
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Normalize form styles */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+  }
+</style>
+
+<!-- This CSS code applies a standard set of styles that overwrite the browser's default styles for all elements. It normalizes the box-sizing, font-family, and font-size for the HTML element, and sets a consistent font size and weight for headings, margins for lists and links, and styles for form elements. This creates a consistent and predictable starting point for your styles, while preserving some of the browser's default styles. -->
+
+<!-- todo 4 : what is css architecture give example ? 
+CSS architecture refers to the process of organizing and structuring your CSS code in a way that makes it more scalable, maintainable, and reusable. A good CSS architecture will help you avoid duplication, improve code readability, and make it easier to add or modify styles as your project evolves.
+
+There are many different CSS architectures out there, but some popular ones include:
+
+BEM (Block-Element-Modifier) - This architecture emphasizes modularity and encapsulation. Styles are organized into blocks, which are made up of elements, and modifiers are used to change the appearance of these blocks and elements.
+
+SMACSS (Scalable and Modular Architecture for CSS) - This architecture is focused on making CSS more scalable and modular. Styles are organized into categories like base, layout, and module, and there is a clear separation between the structure of the page and its visual design.
+
+OOCSS (Object-Oriented CSS) - This architecture is focused on reusability and modularity. Styles are organized into objects, which can be used across multiple projects or pages.
+
+Atomic CSS - This architecture emphasizes the use of small, single-purpose classes that can be combined to create complex styles. Classes are named after their visual properties, such as .bg-red for a red background color.
+
+Here's an example of using the BEM architecture to style a simple form:
+-->
+<html>
+  <form class="form">
+    <div class="form__group">
+      <label class="form__label" for="username">Username:</label>
+      <input class="form__input" type="text" id="username" name="username" />
+    </div>
+    <div class="form__group">
+      <label class="form__label" for="password">Password:</label>
+      <input class="form__input" type="password" id="password" name="password" />
+    </div>
+    <button class="form__button">Submit</button>
+  </form>
+</html>
+
+<!-- In this example, we're using BEM to organize our CSS classes. The form class represents the entire form, while form__group, form__label, form__input, and form__button represent the different components of the form. We can then write our CSS rules like this: -->
+
+<style>
+  .form {
+    margin: 0;
+    padding: 0;
+  }
+
+  .form__group {
+    margin-bottom: 1rem;
+  }
+
+  .form__label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .form__input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .form__button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+</style>
+
+<!-- By using BEM to organize our CSS classes, we can see at a glance which styles are applied to which components of our form. We can also reuse these styles in other parts of our project, or modify them easily if we need to make changes later on. -->
+
+<!-- todo 4 : what is float give example -->
+<!-- In CSS, the float property is used to position an element to the left or right of its container. When an element is floated, it is removed from the normal flow of the page, which means other elements can flow around it.
+
+Here's an example of using the float property to position an image to the right of a block of text:
+
+HTML: -->
+<div class="wrapper">
+  <img src="example.jpg" alt="Example image" class="float-right" />
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis felis in augue dapibus tincidunt. Fusce auctor, justo vel rhoncus imperdiet, ligula nulla hendrerit metus, non consequat
+    risus purus in arcu.
+  </p>
+</div>
+
+<!-- CSS: -->
+<style>
+  .float-right {
+    float: right;
+    margin: 0 0 1em 1em;
+  }
+</style>
+
+<!-- In this example, we've used the float-right class to apply the float: right property to the image, which positions it to the right of the text. We've also added a margin to the image to create some space between it and the surrounding text.
+
+It's important to note that when an element is floated, its container may not expand to contain it, which can cause layout issues if you're not careful. To prevent this, you can use the clear property to ensure that elements following the floated element are positioned correctly. For example, if you want to clear a float after an image, you could use the following CSS: -->
+
+<style>
+  .clear {
+    clear: both;
+  }
+</style>
+
+<!-- And then add the clear class to an element after the floated image: -->
+<div class="wrapper">
+  <img src="example.jpg" alt="Example image" class="float-right" />
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis felis in augue dapibus tincidunt. Fusce auctor, justo vel rhoncus imperdiet, ligula nulla hendrerit metus, non consequat
+    risus purus in arcu.
+  </p>
+  <div class="clear"></div>
+</div>
+
+<!-- This will ensure that any elements following the floated image are positioned below it, rather than beside it. -->
+
+<!-- todo 5 : flex and css grid give example -->
+
+<!-- Both Flexbox and CSS Grid are layout systems in CSS that allow for creating complex and responsive layouts easily. Here are examples of both:
+
+Example of Flexbox:
+
+HTML: -->
+
+<div class="flex-container">
+  <div class="flex-item">Item 1</div>
+  <div class="flex-item">Item 2</div>
+  <div class="flex-item">Item 3</div>
+</div>
+
+<!-- CSS: -->
+
+<style>
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-item {
+    background-color: #e6e6e6;
+    padding: 20px;
+    margin: 10px;
+  }
+</style>
+
+<!-- In this example, we've used Flexbox to create a container with three items that are horizontally centered and vertically aligned. The justify-content: center property centers the items horizontally, while align-items: center centers them vertically.
+
+Example of CSS Grid:
+
+HTML: -->
+
+<div class="grid-container">
+  <div class="grid-item">Item 1</div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item">Item 3</div>
+  <div class="grid-item">Item 4</div>
+</div>
+
+<!-- CSS: -->
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    gap: 20px;
+  }
+
+  .grid-item {
+    background-color: #e6e6e6;
+    padding: 20px;
+  }
+</style>
+
+<!-- In this example, we've used CSS Grid to create a container with four items that are arranged in a grid. The grid-template-columns and grid-template-rows properties define the number and size of the rows and columns in the grid, while the gap property sets the spacing between the items.
+
+These are just simple examples, but Flexbox and CSS Grid are very powerful layout tools that can be used to create a wide variety of layouts. -->
+
+<!-- todo 6 : what is svgs -->
+
+<!-- SVG stands for Scalable Vector Graphics. It is a vector graphics format that uses XML to describe two-dimensional vector graphics. Unlike raster graphics formats (such as JPEG, PNG, or GIF), which store images as a grid of individual pixels, SVG files define images using geometric shapes such as lines, curves, and polygons, which can be scaled up or down without losing quality.
+
+SVG is a popular format for web graphics, as it allows for high-quality images that can be scaled to any size without pixelation or loss of detail. SVG images can also be animated and interacted with using CSS and JavaScript. Many web browsers support SVG natively, which means that SVG images can be displayed directly in the browser without the need for a plugin or additional software. -->
+
+<!-- todo 7 : whats is media queries give with example -->
+<!-- Media queries are a way to apply CSS styles based on certain conditions, such as the size of the screen or device that is being used to view a webpage. Media queries are often used in responsive web design to create layouts that adapt to different screen sizes and device types.
+
+Here's an example of a media query that applies a different background color to a webpage depending on the width of the screen: -->
+
+<style>
+  body {
+    background-color: blue;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      background-color: green;
+    }
+  }
+</style>
+
+<!-- In this example, the background color of the body element is set to blue by default. However, when the screen width is 768 pixels or wider (as specified by the min-width: 768px condition), the background color is changed to green. This allows for a different layout to be displayed on larger screens, while maintaining a consistent design on smaller screens. -->
+
+<!-- todo 8 : css display  -->
+
+<!-- In CSS, the display property is used to specify how an HTML element should be displayed on the web page. The display property can take on several values, each of which controls how the element is laid out and how it interacts with other elements on the page.
+
+Here are some of the most common display property values:
+
+block: This value causes an element to take up the full width of its container and create a new line after it. Block-level elements include headings (<h1> through <h6>), paragraphs (<p>), and divs (<div>).
+
+inline: This value causes an element to be displayed inline with the surrounding text, and to only take up as much width as necessary. Inline elements include links (<a>), spans (<span>), and images (<img>).
+
+inline-block: This value combines the behaviors of block and inline, allowing an element to be displayed inline but also have its width and height set with CSS.
+
+none: This value causes an element to be completely removed from the page layout, effectively making it invisible.
+
+flex: This value enables a flex container for an element and its children. This allows the container to dynamically adjust the size and position of its children in a responsive way.
+
+grid: This value enables a grid container for an element and its children, allowing you to create complex layouts by defining rows and columns.
+
+Here's an example of using the display property to make a div element behave like a button -->
+<style>
+  .button {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+</style>
+
+<div class="button">Click Me!</div>
+
+<!-- In this example, the display property is set to inline-block for the .button class, which allows the div to be displayed inline with surrounding text but also have its width and height set with CSS. The rest of the CSS styles create a blue button with white text, padding, and rounded corners. -->
+
+<!-- todo 9  : what is a property -->
+
+<!-- In HTML and CSS, a property refers to a specific attribute that can be applied to an HTML element or group of elements in order to define their appearance or behavior.
+
+In CSS, properties are used to define styles for HTML elements, such as the font size, color, and background color. Each CSS property has a name and a value, and they are applied to HTML elements using a CSS selector.
+
+For example, the following CSS code sets the font size property of all paragraphs in an HTML document to 16 pixels -->
+
+<style>
+  p {
+    font-size: 16px;
+  }
+</style>
+
+<!-- Similarly, in HTML, properties are used to define attributes of an HTML element. For example, the href property of an anchor (<a>) element defines the URL to which the link should point. The src property of an image (<img>) element defines the URL of the image to be displayed.
+
+Overall, properties are an essential part of both HTML and CSS, as they allow developers to customize the appearance and behavior of web pages -->
+
+
+<!-- todo 10 : What is a position in css -->
+
+<!-- In CSS, the position property is used to control the positioning of an HTML element on a web page. The position property can be used to set an element's position in relation to its containing block (the element's parent element), or in relation to the viewport (the visible area of the web page).
+
+There are four main values for the position property in CSS:
+
+static: This is the default value, and it means that the element is positioned according to the normal flow of the document.
+
+relative: This value positions the element relative to its normal position in the document flow. This means that the element will still take up space in the document flow, but its position can be adjusted using the top, right, bottom, and left properties.
+
+absolute: This value positions the element relative to its closest positioned ancestor (an ancestor element that has a position property other than static). If there is no positioned ancestor, the element will be positioned relative to the viewport.
+
+fixed: This value positions the element relative to the viewport, even if the page is scrolled. This means that the element will stay in the same position on the screen, even if the user scrolls the page.
+
+Overall, the position property is a powerful tool in CSS that allows developers to precisely control the layout and positioning of HTML elements on a web page -->
+
+<div class="container">
+  <div class="box"></div>
+</div>
+
+<style>
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: #eee;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+</style>
+
+<!-- In this example, we have a div element with the class container, which has a position property set to relative. This means that any child elements with a position property set to absolute will be positioned relative to the container.
+
+Inside the container, we have another div element with the class box. This element has a position property set to absolute, and we have used the top, left, and transform properties to center it vertically and horizontally within the container.
+
+Overall, this example demonstrates how the position property can be used to position HTML elements precisely on a web page -->
