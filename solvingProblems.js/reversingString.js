@@ -17,14 +17,14 @@ console.log(reverseString(string)); */
 /* method 2 :    */
 
 
-
-/* const string = 'This is a javaScript Code'
+const string = 'This is a javaScript Code'
 
 const result = string.split(' ').map((word) => word.split('').reverse().join('')
 ).join(' ')
 
-console.log(result); */
+console.log(result);
 
-var x;
-console.log(x); // output: undefined
-x = 10;
+
+
+
+

@@ -6,7 +6,7 @@ let array = [2, 1, 3, 45, 34, 6, 56]
 console.log(...minmunNumber); */
 
 //using math and apply
-console.log(Math.max.apply(Math, array));
+console.log(Math.max(...array));
 
 //using spread operators
 console.log(Math.min(...array));
