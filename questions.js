@@ -149,7 +149,17 @@ console.log(toCelsius(104)) */
 
 
 
-let arr = [7, 5, 9, 1];
+/* let arr = [7, 5, 9, 1];
 let maxNumber = Math.min.apply(null, arr)
 
-console.log(maxNumber);
+console.log(maxNumber); */
+
+/* let date = new Date()
+
+console.log(date.getDay()); */
+
+
+/* let textCount = 'saldhkgasdiw erhflkfcvn '
+
+console.log(textCount.length); */
+
