@@ -163,3 +163,30 @@ console.log(date.getDay()); */
 
 console.log(textCount.length); */
 
+
+
+let myNumber = 2;
+
+let text = '';
+
+
+while (myNumber != Infinity) {
+
+	myNumber = myNumber * myNumber
+
+	text += myNumber + ','
+
+}
+
+console.table('values' + text);
+
+let myNumbere = 2;
+let text1 = '';
+
+const values = [];
+
+while (myNumbere !== Infinity) {
+	myNumbere = myNumbere * myNumbere;
+	values.push(myNumbere);
+}
+console.table(values);
