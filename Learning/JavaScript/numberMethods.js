@@ -22,7 +22,6 @@ console.log(typeof (y.toFixed()), y.toFixed(1));   //string 234.3
 // toPrecision() returns a string, with a number written with a specified length:
 console.log(typeof (y.toPrecision()), y.toPrecision(2)); // string 235
 
-
 // valueOf() returns a number as a number.
 console.log(typeof (y.valueOf()), y.valueOf(2));    //number 234.34
 

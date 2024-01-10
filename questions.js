@@ -13,6 +13,8 @@ console.log('====================================');
 console.log(f2());
 console.log('===================================='); */
 
+const e = require("express");
+
 
 
 /* --------------factorial using recursive ------------ */
@@ -165,7 +167,7 @@ console.log(textCount.length); */
 
 
 
-let myNumber = 2;
+/* let myNumber = 2;
 
 let text = '';
 
@@ -189,4 +191,120 @@ while (myNumbere !== Infinity) {
 	myNumbere = myNumbere * myNumbere;
 	values.push(myNumbere);
 }
-console.table(values);
+console.table(values); */
+
+
+/* var addTwoNumbers = function (l1, l2) {
+
+	let array = []
+
+	let carry = 0
+
+	let maxLength = Math.max(l1.length, l2.length)
+
+	let paddedL1 = l1.concat(Array(maxLength - l1.length).fill(0))
+	let paddedL2 = l2.concat(Array(maxLength - l2.length).fill(0))
+
+
+	for (i = 0; i < maxLength; i++) {
+		let result = paddedL1[i] + paddedL2[i] + carry
+
+		console.log(result);
+
+		if (result >= 10) {
+			array.push((result % 10));
+			carry = Math.floor(result / 10)
+
+		} else {
+			array.push((result % 10));
+			carry = 0
+		}
+	}
+	while (carry > 0) {
+		array.push(carry % 10);
+		carry = Math.floor(carry / 10);
+	}
+};
+
+addTwoNumbers([7, 4, 3], [7, 5, 9, 9, 9]); */
+
+
+
+
+/* const a = { name: 'haseeb' }
+
+console.log(a)
+
+
+const b = a
+
+b.name = 'puja'
+
+console.log(b); */
+/*
+let a;
+console.log(a);
+
+a = 10
+console.log(a); */
+
+
+/* let friends = [
+
+	{
+		name: 'anna',
+		books: ['bible', 'Harry Potter'],
+		age: 21
+	},
+	{
+		name: 'Bob',
+		books: ['War and Peace', 'Romeo Juliet'],
+		age: 26
+	},
+	{
+		name: 'Alice',
+		books: ['The Lord of the Rings', 'The Shining'],
+		age: 18
+	},
+
+];
+
+
+let result = friends.reduce((prev, curr) => {
+	return [...prev, ...curr.books]
+}, [])
+
+console.log(result); */
+
+
+/* friends.map((friend) => {
+	return console.log(...friend.books);
+}) */
+
+
+
+let numbers = [1, 2, 3, 4, 5, 6, 12, 7, 80]
+
+
+
+
+
+function maxNumbers(numbers) {
+
+	return numbers.reduce((max, current) => {
+		if (current > max) {
+			return current;
+		} else {
+			return max;
+		};
+	})
+
+};
+
+
+let maxNum = maxNumbers(numbers)
+
+
+console.log(maxNum);
+
+

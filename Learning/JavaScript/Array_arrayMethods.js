@@ -192,13 +192,6 @@ console.log(numbers.filter((number, index, arr) =>
 ));
 
 
-
-
-
-
-
-
-
 /* 
 
 Summary : 

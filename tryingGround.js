@@ -18,11 +18,11 @@ console.log(merge);
 /* let array1 = []
 
 for (let i = 0; i < array.length; i++) {
-	
+
 	if (array[i] == 'a' || array[i] == 'e' || array[i] == 'i' || array[i] == 'o' || array[i] == 'u') { array1.push(array[i].toUpperCase()) }
 	else
 	array1.push(array[i])
-	
+
 }
 console.log(array1.join('')); */
 
@@ -99,3 +99,18 @@ console.log(FirstLetterCapitalize('hello world')); */
 
 
 /*  */
+
+
+// palidrome or not
+
+/* function isPalindrome(string) {
+	let reverseString = string.split('').reverse().join('')
+
+
+	return reverseString == string
+}
+
+console.log(isPalindrome('heeh'));  */
+
+const myArray = [1, 2, 3];
+console.log(Array.isArray(myArray)); // Outputs true
